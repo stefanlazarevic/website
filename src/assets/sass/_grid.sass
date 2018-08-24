@@ -1,0 +1,120 @@
+$xs: "screen and (min-width: 480px)"
+$sm: "screen and (min-width: 576px)"
+$md: "screen and (min-width: 768px)"
+$lg: "screen and (min-width: 992px)"
+$xlg: "screen and (min-width: 1200px)"
+
+.clearfix
+    &::before,
+    &::after
+        display: table
+        content: " "
+    &::after
+        clear: both
+
+.container--fluid
+    @extend .clearfix
+    position: relative
+    width: 100%
+    padding:
+        left: 15px
+        right: 15px
+
+.container
+    @extend .container--fluid
+    margin:
+        left: auto
+        right: auto
+    @media #{$xs}
+        max-width: 460px
+    @media #{$sm}
+        max-width: 540px
+    @media #{$md}
+        max-width: 720px
+    @media #{$lg}
+        max-width: 960px
+    @media #{$xlg}
+        max-width: 1090px
+
+.row
+    @extend .clearfix
+    margin:
+        left: -15px
+        right: -15px
+
+.row--border
+    @extend .row
+    border:
+        top: 1px solid #eee
+        bottom: 1px solid #eee
+
+$grid-size: 12
+
+=column
+    position: relative
+    width: 100%
+    min-height: 1px
+    float: left
+    padding:
+        left: 15px
+        right: 15px
+    z-index: 2
+
+$prefix-map: ("xs", "sm", "md", "lg", "xlg")
+
+@for $column from 1 through $grid-size
+    .col-#{$column}
+        +column
+
+@each $prefix in $prefix-map
+    @for $column from 1 through $grid-size
+        .col-#{$prefix}-#{$column}
+            +column
+
+@for $column from 1 through $grid-size
+    .col-#{$column}
+        max-width: $column / $grid-size * 100%
+    .col-push-#{$column}
+        left: $column / $grid-size * 100%
+    .col-pull-#{$column}
+        right: $column / $grid-size * 100%
+@media #{$xs}
+    @for $column from 1 through $grid-size
+        .col-xs-#{$column}
+            max-width: $column / $grid-size * 100%
+        .col-xs-push-#{$column}
+            left: $column / $grid-size * 100%
+        .col-xs-pull-#{$column}
+            right: $column / $grid-size * 100%
+@media #{$sm}
+    @for $column from 1 through $grid-size
+        .col-sm-#{$column}
+            max-width: $column / $grid-size * 100%
+        .col-sm-push-#{$column}
+            left: $column / $grid-size * 100%
+        .col-sm-pull-#{$column}
+            right: $column / $grid-size * 100%
+@media #{$md}
+    @for $column from 1 through $grid-size
+        .col-md-#{$column}
+            max-width: $column / $grid-size * 100%
+        .col-md-push-#{$column}
+            left: $column / $grid-size * 100%
+        .col-md-pull-#{$column}
+            right: $column / $grid-size * 100%
+@media #{$lg}
+    @for $column from 1 through $grid-size
+        .col-lg-#{$column}
+            max-width: $column / $grid-size * 100%
+        .col-lg-push-#{$column}
+            left: $column / $grid-size * 100%
+        .col-lg-pull-#{$column}
+            right: $column / $grid-size * 100%
+@media #{$xlg}
+    @for $column from 1 through $grid-size
+        .col-xlg-#{$column}
+            max-width: $column / $grid-size * 100%
+        .col-xlg-push-#{$column}
+            left: $column / $grid-size * 100%
+        .col-xlg-pull-#{$column}
+            right: $column / $grid-size * 100%
