@@ -1,17 +1,18 @@
 {
   "name": "website-ssr-react",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "main": "./build/server.bundle.js",
   "scripts": {
     "webpack:server": "webpack --config webpack.server.config.js --watch",
     "webpack:client": "webpack --config webpack.client.config.js --watch",
     "webpack:start": "nodemon --watch build --exec node ./build/server.bundle.js",
     "build": "webpack --config webpack.server.config.js && webpack --config webpack.client.config.js",
-    "dev": "npm-run-all --parallel webpack:*"
+    "dev": "npm-run-all --parallel webpack:*",
+    "prod": "node build/server.bundle.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Stefan Lazarevic",
   "license": "ISC",
   "dependencies": {
     "body-parser": "1.18.3",

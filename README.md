@@ -37,4 +37,4 @@ You can visit it live at: ``https://``
 
 ### Known issues
 
-- None
+- Navigation is not responsive.
