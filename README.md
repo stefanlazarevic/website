@@ -24,7 +24,7 @@ You can visit it live at: ``https://``
 - Add metadata.
 - Add favicon. ✓
 - Create projects page.
-- Create Experience page.
+- Create Experience page. ✓
 - Create blog page.
 - Validate SEO.
 - Optimize site for user accessibility.
