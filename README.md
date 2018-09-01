@@ -9,20 +9,20 @@ You can visit it live at: ``https://``
 ### Built using following technologies:
 
 - React
-- Typescript
+- Node.js + Express.js
 - Sass
+- Webpack
 
 ---
 
 ### Todo tracklist
 
 - Support offline mode.
-- Integrate React server side rendering.
-- Create backend API using Node and Mongo to store portfolio data.
+- Integrate React server side rendering. ✓
 - Add unit tests.
 - Add critical css into styles.
 - Add metadata.
-- Add favicon
+- Add favicon. ✓
 - Create projects page.
 - Create Experience page.
 - Create blog page.
