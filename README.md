@@ -20,8 +20,8 @@ You can visit it live at: ``https://``
 - Support offline mode.
 - Integrate React server side rendering. ✓
 - Add unit tests.
-- Add critical css into styles.
-- Add metadata.
+- Add critical css into styles. ✓
+- Add metadata. ✓
 - Add favicon. ✓
 - Create projects page.
 - Create Experience page. ✓
@@ -32,9 +32,10 @@ You can visit it live at: ``https://``
 - Add Serbian version of website.
 - Integrate website with Travis CI for continuous integration.
 - Get domain and hosting and publish webiste.
+- Add Responsive navigation. ✓
 
 ---
 
 ### Known issues
 
-- Navigation is not responsive.
+- None

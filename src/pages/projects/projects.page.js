@@ -6,7 +6,7 @@ class ProjectsPage extends React.Component {
     head() {
         return (
             <Helmet>
-                <title>Projects</title>
+                <title>Stefan Lazarevic - Full Stack Web Developer | </title>
             </Helmet>
         )
     }

@@ -1,3 +1,5 @@
+import env from './src/config/env.client';
+
 function singleLineString(strings, ...values) {
     // Interweave the strings with the
     // substitution vars first.
@@ -12,8 +14,8 @@ function singleLineString(strings, ...values) {
 
     // Rip out the leading whitespace.
     return lines.map((line) => {
-        return line.replace(/^\s+/gm, '');
-    }).join(' ').trim();
+        return line.replace(/(^\s+)|(<!--(.*?)-->)/gm, '');
+    }).join('').trim();
 }
 
 export default (options) =>
@@ -22,10 +24,12 @@ export default (options) =>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="author" content="Stefan Lazarevic" />
+    <meta name="author" content="${env.APP_AUTHOR}" />
 
     <meta name="name" content="Stefan Lazarevic - Web Developer">
     <meta name="short_name" content="Stefan L." />
+
+    <base href="${env.APP_BASE_URL}" />
 
     ${options.meta}
 
@@ -54,11 +58,13 @@ export default (options) =>
     <meta name="theme-color" content="#3d3d57">
 
     <link href="/css/styles.min.css" rel="stylesheet" />
+
     ${options.links}
+
 </head>
 <body>
     <div id="app">${options.body}</div>
-    <script>
+    <script defer>
         (function() {
             const link = document.createElement('link');
             link.href = "https://use.fontawesome.com/releases/v5.3.1/css/all.css";
@@ -66,7 +72,7 @@ export default (options) =>
             link.rel = "stylesheet";
             const head = document.getElementsByTagName('head')[0];
             head.appendChild(link);
-        })(window);
+        })();
         (function() {
             const link = document.createElement('link');
             link.href = "https://fonts.googleapis.com/css?family=Open+Sans";
@@ -74,7 +80,7 @@ export default (options) =>
             link.rel = "stylesheet";
             const head = document.getElementsByTagName('head')[0];
             head.appendChild(link);
-        })(window);
+        })();
     </script>
     <script src="/js/client.min.js"></script>
 </body>

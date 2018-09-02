@@ -8,11 +8,22 @@ class Navigation extends React.Component {
     constructor(props) {
         super(props);
         this.Content = ContentController.getContentForLanguage('en').navigation;
+        this.state = {
+            expanded: this.props.expanded
+        }
+    }
+
+    componentWillReceiveProps(props) {
+        this.setState(state => {
+            return {
+                expanded: props.expanded,
+            }
+        });
     }
 
     render() {
         return (
-            <nav id="navigation">
+            <nav id="navigation" className={this.state.expanded ? 'active' : ''}>
                 <ul className="navigation__list text--center text-md--right">
                     <li>
                         <NavLink to={Routes.ABOUT} className="navigation__link role-link">

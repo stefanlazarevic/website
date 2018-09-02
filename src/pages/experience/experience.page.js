@@ -5,11 +5,14 @@ import Routes from '../../constants/Routes';
 import ContentController from '../../content/ContentController';
 import PageNavigation from '../../components/pageNavigation/PageNavigation';
 import Company from '../../components/company/Company';
+import PageFooter from '../../components/pageFooter/pageFooter';
 
+// import dotenv from 'dotenv';
 class ExperiencePage extends React.Component {
 
     componentWillMount() {
         this.Content = ContentController.getContentForLanguage('en').experience;
+        // this.env = dotenv.config().parsed;
     }
 
     head() {
@@ -18,6 +21,8 @@ class ExperiencePage extends React.Component {
                 <title>Stefan Lazarevic - Full Stact Web Developer | {this.Content.PAGE_TITLE}</title>
                 <meta name="description" content="What my skills are and how I gained them over the years of working in IT industry."></meta>
                 <meta name="keywords" content="stefan, lazarevic, developer"></meta>
+                <style>{this.Content.CRITICAL_CSS}</style>
+                {/* <link rel="canonical" href={`${this.env.APP_BASE_URL}${Routes.EXPERIENCE}`} /> */}
             </Helmet>
         )
     }
@@ -53,6 +58,7 @@ class ExperiencePage extends React.Component {
                         />
                     </div>
                 </div>
+                <PageFooter />
             </section>
         );
     }

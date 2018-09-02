@@ -33,6 +33,9 @@ module.exports = {
                                 browsers: ['last 2 versions']
                             }
                         }]
+                    ],
+                    plugins: [
+                        "transform-class-properties",
                     ]
                 }
             },
@@ -88,7 +91,7 @@ module.exports = {
         new CopyWebpackPlugin([
             { from: path.resolve(__dirname, 'src/public'), to: path.resolve(__dirname, 'build/public') },
         ], {
-                debug: 'debug'
+                debug: process.env.APP_ENV === 'production' ? 'ignore' : 'debug',
         })
     ],
     externals: [],

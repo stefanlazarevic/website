@@ -6,7 +6,9 @@ import RoutesExternal from '../../constants/RoutesExternal';
 import Routes from '../../constants/Routes';
 import PageNavigation from '../../components/pageNavigation/PageNavigation';
 import ContentController from '../../content/ContentController';
+import PageFooter from '../../components/pageFooter/pageFooter';
 
+// import dotenv from 'dotenv';
 class ContactPage extends React.Component {
     constructor() {
         super();
@@ -15,6 +17,7 @@ class ContactPage extends React.Component {
 
     componentWillMount() {
         this.Content = ContentController.getContentForLanguage('en').contact;
+        // this.env = dotenv.config().parsed;
     }
 
     head() {
@@ -22,6 +25,8 @@ class ContactPage extends React.Component {
             <Helmet>
                 <title>Stefan Lazarevic - Full Stack Web Developer | {this.Content.PAGE_TITLE}</title>
                 <meta name="description" content="Connect with Stefan on social media or start developing your next bussiness idea together."></meta>
+                <style>{this.Content.CRITICAL_CSS}</style>
+                {/* <link rel="canonical" href={`${this.env.APP_BASE_URL}${Routes.CONTACT}`} /> */}
             </Helmet>
         )
     }
@@ -71,6 +76,7 @@ class ContactPage extends React.Component {
                         />
                     </div>
                 </div>
+                <PageFooter />
             </section>
         );
     }

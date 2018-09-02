@@ -1,6 +1,7 @@
 export default {
     ALL: '/**',
-    INDEX: '/',
+    HOME: '/',
+    INDEX: '/index',
     ABOUT: '/about',
     PROJECTS: '/projects',
     EXPERIENCE: '/experience',

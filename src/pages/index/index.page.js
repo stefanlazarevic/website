@@ -6,6 +6,8 @@ import Routes from '../../constants/Routes';
 import ContentController from '../../content/ContentController';
 import Header from '../../components/header/Header';
 
+import env from '../../config/env.client';
+
 class IndexPage extends React.Component {
     constructor() {
         super();
@@ -19,9 +21,10 @@ class IndexPage extends React.Component {
     head() {
         return (
             <Helmet>
-                <title>Stefan Lazarevic - Full Stack Web Developer</title>
+                <title>{env.APP_BASE_TITLE} | Portfolio</title>
                 <meta name="description" content={this.Content.SEO.DESCRIPTION}></meta>
                 <style>{this.Content.CRITICAL_CSS}</style>
+                <link rel="canonical" href={env.APP_BASE_URL} />
             </Helmet>
         );
     }

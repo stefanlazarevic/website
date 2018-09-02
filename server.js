@@ -16,9 +16,22 @@ import NotFoundPage from './src/pages/errors/404.page';
 const app = express();
 app.use(compression());
 app.use(bodyParser.json());
+
+app.use(function (req, res, next) {
+    const pathParts = req.url.split('.');
+    const requestedExtension = pathParts[pathParts.length - 1];
+
+    if (requestedExtension === 'html' || requestedExtension === 'htm') {
+        pathParts.pop();
+        req.url = pathParts.join('');
+    }
+
+    next();
+});
+
 app.use(express.static('build/public'));
 
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.APP_PORT || 8080;
 
 app.get('*', (request, response) => {
     let status = 200;

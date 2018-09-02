@@ -1,7 +1,7 @@
 require('dotenv').config();
 const webpack = require('webpack');
 const path = require('path');
-const webpackNodeExternals = require('webpack-node-externals')
+const webpackNodeExternals = require('webpack-node-externals');
 
 module.exports = {
     bail: true,
@@ -28,6 +28,9 @@ module.exports = {
                                 browsers: ['last 2 versions']
                             }
                         }]
+                    ],
+                    plugins: [
+                        "transform-class-properties",
                     ]
                 }
             },
