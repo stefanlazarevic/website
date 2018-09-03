@@ -3,7 +3,7 @@ export default {
     HOME: '/',
     INDEX: '/index',
     ABOUT: '/about',
-    PROJECTS: '/projects',
+    WORK: '/work',
     EXPERIENCE: '/experience',
     CONTACT: '/contact',
 };

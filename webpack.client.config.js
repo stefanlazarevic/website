@@ -57,7 +57,7 @@ module.exports = {
                         options: {
                             minimize: true,
                             url: true,
-                            root: 'http://localhost:9000'
+                            root: 'http://localhost:8080'
                         }
                     },
                     {

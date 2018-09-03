@@ -5,9 +5,13 @@ export default {
     PAGE_TITLE: 'Experience',
     PAGE_NAVIGATION: {
         BACK_BUTTON_TEXT: 'Back to projects',
-        BACK_BUTTON_LINK: Routes.PROJECTS,
+        BACK_BUTTON_LINK: Routes.WORK,
         FORWARD_BUTTON_TEXT: 'Go to contact',
         FORWARD_BUTTON_LINK: Routes.CONTACT
+    },
+    SEO: {
+        DESCRIPTION: 'What my skills are and how I gained them over the years of working in IT industry.',
+        KEYWORDS: 'stefan, lazarevic, developer',
     },
     EXPERIENCE: ExperienceCompany,
     CRITICAL_CSS: `

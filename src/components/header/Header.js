@@ -30,7 +30,7 @@ class Header extends React.Component {
                             <Link to={Routes.HOME} className="text--gray">
                                 <span className="text--thin">Stefan</span>
                                 <span>&nbsp;</span>
-                                <span className="text--bold text--orange">Lazarević</span>
+                                <span className="text--bold text--orange">Lazarevic</span>
                             </Link>
                             <div className={`hamburger ${this.state.navigationExpanded ? 'active' : ''}`} onClick={this.expandNavigation}>
                                 <div className="bar1"></div>

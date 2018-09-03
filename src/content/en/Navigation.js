@@ -3,4 +3,5 @@ export default {
     CONTACT: 'Contact',
     EXPERIENCE: 'Experience',
     PROJECTS: 'Projects',
+    WORK: 'Work',
 }

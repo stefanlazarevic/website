@@ -2,6 +2,7 @@ import Routes from './Routes';
 
 import IndexPage from '../pages/index/index.page';
 import AboutPage from '../pages/about/about.page';
+import WorkPage from '../pages/work/work.page';
 import ExperiencePage from '../pages/experience/experience.page';
 import ContactPage from '../pages/contact/contact.page';
 import NotFoundPage from '../pages/errors/404.page';
@@ -26,6 +27,11 @@ const routes = [
         path: buildStaticPaths(Routes.ABOUT),
         exact: true,
         component: AboutPage
+    },
+    {
+        path: buildStaticPaths(Routes.WORK),
+        exact: true,
+        component: WorkPage
     },
     {
         path: buildStaticPaths(Routes.EXPERIENCE),

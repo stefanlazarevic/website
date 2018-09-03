@@ -8,7 +8,7 @@ import PageNavigation from '../../components/pageNavigation/PageNavigation';
 import ContentController from '../../content/ContentController';
 import PageFooter from '../../components/pageFooter/pageFooter';
 
-// import dotenv from 'dotenv';
+import env from '../../config/env.client';
 class ContactPage extends React.Component {
     constructor() {
         super();
@@ -17,16 +17,16 @@ class ContactPage extends React.Component {
 
     componentWillMount() {
         this.Content = ContentController.getContentForLanguage('en').contact;
-        // this.env = dotenv.config().parsed;
     }
 
     head() {
         return (
             <Helmet>
                 <title>Stefan Lazarevic - Full Stack Web Developer | {this.Content.PAGE_TITLE}</title>
-                <meta name="description" content="Connect with Stefan on social media or start developing your next bussiness idea together."></meta>
+                <meta name="description" content={this.Content.SEO.DESCRIPTION}></meta>
+                <meta name="keywords" content={this.Content.SEO.KEYWORDS}></meta>
                 <style>{this.Content.CRITICAL_CSS}</style>
-                {/* <link rel="canonical" href={`${this.env.APP_BASE_URL}${Routes.CONTACT}`} /> */}
+                <link rel="canonical" href={`${env.APP_BASE_URL}${Routes.CONTACT}`} />
             </Helmet>
         )
     }

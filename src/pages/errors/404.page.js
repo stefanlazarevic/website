@@ -4,12 +4,13 @@ import { Helmet } from 'react-helmet';
 import PageHeader from '../../components/pageHeader/PageHeader';
 import Routes from '../../constants/Routes';
 
+import env from '../../config/env.client';
 class NotFoundPage extends React.Component {
 
     head() {
         return (
             <Helmet>
-                <title>Stefan Lazarevic - Web Developer | Page Not Found</title>
+                <title>{env.APP_BASE_TITLE} | Page Not Found</title>
             </Helmet>
         )
     }

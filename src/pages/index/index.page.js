@@ -21,8 +21,9 @@ class IndexPage extends React.Component {
     head() {
         return (
             <Helmet>
-                <title>{env.APP_BASE_TITLE} | Portfolio</title>
-                <meta name="description" content={this.Content.SEO.DESCRIPTION}></meta>
+                <title>{env.APP_BASE_TITLE}</title>
+                <meta name="description" content={this.Content.SEO.DESCRIPTION} />
+                <meta name="keywords" content={this.Content.SEO.KEYWORDS} />
                 <style>{this.Content.CRITICAL_CSS}</style>
                 <link rel="canonical" href={env.APP_BASE_URL} />
             </Helmet>
@@ -50,7 +51,7 @@ class IndexPage extends React.Component {
                             </div>
                             <div className="col-sm-12 col-md-6 col-md-pull-6">
                                 <h2 className="page__title--large text--center text-md--left">
-                                    <span className="text--thin text--white">Full Stack</span>
+                                    <span className="text--thin text--white">Full Stack&nbsp;</span>
                                     <br />
                                     <span className="text--orange">Web developer</span>
                                 </h2>

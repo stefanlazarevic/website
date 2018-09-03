@@ -6,7 +6,7 @@ import PageNavigation from '../../components/pageNavigation/PageNavigation';
 import PageHeader from '../../components/pageHeader/PageHeader';
 import PageFooter from '../../components/pageFooter/pageFooter';
 
-// import dotenv from 'dotenv';
+import env from '../../config/env.client';
 class AboutPage extends React.Component {
     constructor() {
         super();
@@ -15,16 +15,16 @@ class AboutPage extends React.Component {
 
     componentWillMount() {
         this.Content = ContentController.getContentForLanguage('en').about;
-        // this.env = dotenv.config().parsed;
     }
 
     head() {
         return (
             <Helmet>
-                <title>Stefan Lazarevic - Full Stact Web Developer | {this.Content.PAGE_TITLE}</title>
-                <meta name="description" content="Read more about who Stefan Lazarevic is and what he does."></meta>
+                <title>{env.APP_BASE_TITLE} | {this.Content.PAGE_TITLE}</title>
+                <meta name="description" content={this.Content.SEO.DESCRIPTION}></meta>
+                <meta name="keywords" content={this.Content.SEO.KEYWORDS} />
                 <style>{this.Content.CRITICAL_CSS}</style>
-                {/* <link rel="canonical" href={`${this.env.APP_BASE_URL}${Routes.ABOUT}`} /> */}
+                <link rel="canonical" href={`${env.APP_BASE_URL}${Routes.ABOUT}`} />
             </Helmet>
         )
     }
