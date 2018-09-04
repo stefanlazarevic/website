@@ -5,6 +5,8 @@ import env from '../../config/env.client';
 import ContentController from '../../content/ContentController';
 import PageHeader from '../../components/pageHeader/PageHeader';
 import PageNavigation from '../../components/pageNavigation/PageNavigation';
+import WorkCard from '../../components/workCard/workCard';
+import PageFooter from '../../components/pageFooter/pageFooter';
 
 class WorkPage extends React.Component {
 
@@ -41,6 +43,15 @@ class WorkPage extends React.Component {
                                 <h2 className="page__title text--center text-md--left">{this.Content.PAGE_TITLE}</h2>
                             </div>
                         </div>
+                        <div className="row">
+                            {this.Content.WORK.map((work, index) => {
+                                return (
+                                    <div key={index} className="col-12 col-md-4">
+                                        <WorkCard title={work.TITLE} thumbnail_url={work.THUMBNAIL_URL}/>
+                                    </div>
+                                )
+                            })}
+                        </div>
                         <PageNavigation prevLink={this.Content.PAGE_NAVIGATION.BACK_BUTTON_LINK}
                             prevText={this.Content.PAGE_NAVIGATION.BACK_BUTTON_TEXT}
                             nextLink={this.Content.PAGE_NAVIGATION.FORWARD_BUTTON_LINK}
@@ -48,6 +59,7 @@ class WorkPage extends React.Component {
                         />
                     </div>
                 </div>
+                <PageFooter />
             </section>
         );
     }

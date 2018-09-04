@@ -11,5 +11,55 @@ export default {
     SEO: {
         DESCRIPTION: '',
         KEYWORDS: '',
-    }
+    },
+    WORK: [
+        {
+            TITLE: 'Deluxe - Direct to Debut',
+            LIVE_URL: '',
+            GITHUB_URL: '',
+            THUMBNAIL_URL: '',
+        },
+        {
+            TITLE: 'My Portfolio',
+            LIVE_URL: '',
+            GITHUB_URL: '',
+            THUMBNAIL_URL: '/img/my-portfolio.jpg',
+        },
+        {
+            TITLE: 'Signature generator',
+            LIVE_URL: '',
+            GITHUB_URL: '',
+            THUMBNAIL_URL: '',
+        },
+        {
+            TITLE: 'The Autominer - Car Sales Tool',
+            LIVE_URL: '',
+            GITHUB_URL: '',
+            THUMBNAIL_URL: '',
+        },
+        {
+            TITLE: 'Threedium Portfolio',
+            LIVE_URL: '',
+            GITHUB_URL: '',
+            THUMBNAIL_URL: '',
+        },
+        {
+            TITLE: 'JSEasy',
+            LIVE_URL: '',
+            GITHUB_URL: '',
+            THUMBNAIL_URL: '',
+        },
+        {
+            TITLE: 'Meinunfallauto',
+            LIVE_URL: '',
+            GITHUB_URL: '',
+            THUMBNAIL_URL: '',
+        },
+        {
+            TITLE: 'Fudeks - Rent a Car',
+            LIVE_URL: '',
+            GITHUB_URL: '',
+            THUMBNAIL_URL: '',
+        }
+    ]
 };
