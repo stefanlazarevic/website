@@ -14,6 +14,10 @@ class AboutPage extends React.Component {
     }
 
     componentWillMount() {
+        if (typeof (window) !== 'undefined') {
+            window.scrollTo(0, 0);
+        }
+
         this.Content = ContentController.getContentForLanguage('en').about;
     }
 

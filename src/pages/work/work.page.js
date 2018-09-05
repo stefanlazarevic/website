@@ -16,6 +16,10 @@ class WorkPage extends React.Component {
     }
 
     componentWillMount() {
+        if (typeof (window) !== 'undefined') {
+            window.scrollTo(0, 0);
+        }
+
         this.Content = ContentController.getContentForLanguage('en').work;
     }
 
@@ -46,8 +50,14 @@ class WorkPage extends React.Component {
                         <div className="row">
                             {this.Content.WORK.map((work, index) => {
                                 return (
-                                    <div key={index} className="col-12 col-md-4">
-                                        <WorkCard title={work.TITLE} thumbnail_url={work.THUMBNAIL_URL}/>
+                                    <div key={index} className="col-12">
+                                        <WorkCard title={work.TITLE}
+                                                thumbnail_url={work.THUMBNAIL_URL}
+                                                description={work.DESCRIPTION}
+                                                scheme={work.SCHEME_CLASS}
+                                                live_url={work.LIVE_URL}
+                                                github_url={work.GITHUB_URL}
+                                                />
                                     </div>
                                 )
                             })}

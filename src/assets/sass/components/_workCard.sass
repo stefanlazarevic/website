@@ -1,29 +1,164 @@
-.work__card
-    position: relative
-    border: 1px solid $gray
-    margin-bottom: 25px
-    background-color: #fafafa
-    cursor: pointer
+.flex
+    display: flex
+
+.flex-inline
+    display: inline-flex
+
+.flex__container
+    padding: 0 15px
+
+.flex-row
+    flex-direction: row
+    margin: 0 -15px
+    &-reverse
+        @extend .flex-row
+        flex-direction: row-reverse
+
+.flex-col
+    flex-direction: column
+    &-reverse
+        flex-direction: column-reverse
+
+@for $i from 1 through 12
+    .flex-#{$i}
+        flex: #{$i}
+    .flex-order-#{$i}
+        order: #{$i}
+
+.flex-align-content
+    &-start
+        align-content: flex-start
+    &-end
+        align-content: flex-end
+    &-center
+        align-content: center
+    &-space-between
+        align-content: space-between
+    &-space-around
+        align-content: space-around
+    &-stretch
+        align-content: stretch
+
+.flex-align-items
+    &-start
+        align-items: flex-start
+    &-end
+        align-items: flex-end
+    &-center
+        align-items: center
+    &-space-between
+        align-items: space-between
+    &-space-around
+        align-items: space-around
+    &-stretch
+        align-items: stretch
+
+.flex-justify-content
+    &-space-around
+        justify-content: space-around
+
+.flex-justify-items
+    &-start
+        justify-items: start
+    &-end
+        justify-items: end
+    &-center
+        justify-items: center
+
+.flex-wrap
+    flex-wrap: wrap
+    &-reverse
+        flex-wrap: wrap-reverse
+
+
+.portfolio__container
+    margin-bottom: 40px
+    border-radius: 7px
+    align-items: start
+    @media #{$md}
+        flex-direction: row
+        align-items: center
+
+.portfolio__image
     overflow: hidden
-    min-height: 207px
+    border-top-left-radius: 7px
+    border-top-right-radius: 7px
     img
-        display: inherit
-        width: 100%
-        height: 100%
+        border-top-left-radius: 7px
+        border-top-right-radius: 7px
+        box-shadow: 0 5px 30px 0 rgba(0,0,0,.4), 0 5px 15px 0 rgba(0,0,0,.2)
+        @media #{$md}
+            transform: translateY(5px)
+            margin-top: 3em
+            max-width: 80%
 
-.work__footer
-    position: absolute
-    bottom: 0
-    left: 0
-    width: 100%
-    color: $white
-    background: rgba(0, 0, 0, .65)
-    transition: .3s all linear
-    transform: translateY(100%)
-    h4
+.portfolio__content
+    padding: 0 15px 20px
+
+.portfolio__title
+    margin: 20px 0
+
+.portfolio__paragraph
+    font-size: 1em
+    line-height: 1.5em
+
+.portfolio__footer
+    a
+        display: inline-block
+        margin-right: 10px
+    i.fab, i.fas
         margin: 0
-        font-weight: 100
-        padding: 5px 10px
+        color: $lightgray
+        font-size: 1.5em
 
-.work__card:hover > .work__footer
-    transform: translateY(0)
+.d2d-scheme
+    background-color: #4b505a
+    color: $white
+    .portfolio__paragraph
+        color: $white
+
+.portfolio-scheme
+    background-color: #68688e
+    color: $white
+    .portfolio__paragraph
+        color: $white
+
+.signature-scheme
+    background-color: #e4e4e4
+    color: #333
+    .portfolio__paragraph
+        color: #333
+    i.fab, i.fas
+        color: #333
+
+.autominer-scheme
+    background-color: #537bb3
+    color: $white
+    .portfolio__paragraph
+        color: $white
+
+.threedium-scheme
+    background-color: #495fa0
+    color: $white
+    .portfolio__paragraph
+        color: $white
+
+.jseasy-scheme
+    background-color: #e8c71f
+    color: #333
+    .portfolio__paragraph
+        color: #333
+    i.fab, i.fas
+        color: #333
+
+.meinunfall-scheme
+    background-color: #4db7ff
+    color: $white
+    .portfolio__paragraph
+        color: $white
+
+.rentacar-scheme
+    background-color: #757474
+    color: $white
+    .portfolio__paragraph
+        color: $white

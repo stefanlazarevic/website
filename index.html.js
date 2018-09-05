@@ -66,20 +66,28 @@ export default (options) =>
     <div id="app">${options.body}</div>
     <script defer>
         (function() {
-            const link = document.createElement('link');
+            var link = document.createElement('link');
+            var head = document.getElementsByTagName('head')[0];
             link.href = "https://use.fontawesome.com/releases/v5.3.1/css/all.css";
             link.type = "text/css";
             link.rel = "stylesheet";
-            const head = document.getElementsByTagName('head')[0];
             head.appendChild(link);
         })();
         (function() {
-            const link = document.createElement('link');
+            var link = document.createElement('link');
+            var head = document.getElementsByTagName('head')[0];
             link.href = "https://fonts.googleapis.com/css?family=Open+Sans";
             link.type = "text/css";
             link.rel = "stylesheet";
-            const head = document.getElementsByTagName('head')[0];
             head.appendChild(link);
+        })();
+        (function () {
+            [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+                img.setAttribute('src', img.getAttribute('data-src'));
+                img.onload = function() {
+                    img.removeAttribute('data-src');
+                };
+            });
         })();
     </script>
     <script src="/js/client.min.js"></script>

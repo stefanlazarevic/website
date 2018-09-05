@@ -11,6 +11,10 @@ import env from '../../config/env.client';
 class ExperiencePage extends React.Component {
 
     componentWillMount() {
+        if (typeof (window) !== 'undefined') {
+            window.scrollTo(0, 0);
+        }
+
         this.Content = ContentController.getContentForLanguage('en').experience;
     }
 
