@@ -57,6 +57,7 @@ class WorkPage extends React.Component {
                                                 scheme={work.SCHEME_CLASS}
                                                 live_url={work.LIVE_URL}
                                                 github_url={work.GITHUB_URL}
+                                                tags={work.TAGS}
                                                 />
                                     </div>
                                 )

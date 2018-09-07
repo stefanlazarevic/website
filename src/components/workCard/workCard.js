@@ -19,6 +19,10 @@ class WorkCard extends React.Component {
                         {this.props.description}
                     </p>
 
+                    <div>
+                        {this.props.tags.map((tag, index) => <div key={index} className="tag">{tag}</div>)}
+                    </div>
+
                     <div className="portfolio__footer">
                         { this.props.live_url ? (
                             <a href={this.props.live_url}>
