@@ -36,7 +36,7 @@ export default {
             LIVE_URL: '',
             GITHUB_URL: 'https://github.com/stefanlazarevic/website',
             THUMBNAIL_URL: '/img/portfolio/my-portfolio.png',
-            DESCRIPTION: '',
+            DESCRIPTION: 'Well...',
             TAGS: [
                 'React',
                 'Express',
@@ -81,7 +81,7 @@ export default {
             LIVE_URL: 'https://threedium.co.uk/',
             GITHUB_URL: '',
             THUMBNAIL_URL: '/img/portfolio/threedium.png',
-            DESCRIPTION: '',
+            DESCRIPTION: 'Portfolio website for 3D advertising company.',
             TAGS: [
                 'Laravel',
                 'Sass / BEM',
@@ -129,7 +129,7 @@ export default {
             LIVE_URL: 'https://fudeksrentacar.rs/',
             GITHUB_URL: '',
             THUMBNAIL_URL: '/img/portfolio/fudeks-rentacar.png',
-            DESCRIPTION: '',
+            DESCRIPTION: 'Application that helps users quickly rent a car in capital of Serbia.',
             TAGS: [
                 'Laravel',
                 'JQuery',
