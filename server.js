@@ -1,20 +1,46 @@
 require('dotenv').config();
 import 'babel-polyfill';
+
+/**
+ * Node.js + Express
+ */
+import http from 'http';
+import https from 'https';
+import fs from 'fs';
+import path from 'path';
 import express from 'express';
 import bodyParser from 'body-parser';
-import React from 'react';
-import ReactDOMServer from 'react-dom/server';
-import Helmet from 'react-helmet';
 import compression from 'compression';
 
+/**
+ * React
+ */
+import React from 'react';
+import ReactDOMServer from 'react-dom/server';
 import { StaticRouter, matchPath } from 'react-router';
+import Helmet from 'react-helmet';
+
+/**
+ * Application
+ */
 import pageHTML from './index.html';
 import AppRouter from './src/AppRouter';
 import AppRoutes from './src/constants/AppRoutes';
 import routes from './src/constants/AppRoutes';
 import NotFoundPage from './src/pages/errors/404.page';
 
+/**
+ * Declaring constants.
+ */
+const PORT = process.env.APP_PORT || 80;
+const PORT_SSL = process.env.APP_PORT_SSL || 8443;
 const app = express();
+
+// const options = {
+//     key: fs.readFileSync(path.join(process.cwd(), `/build/ssl/${process.env.APP_DOMAIN}.key`), 'utf8'),
+//     cert: fs.readFileSync(path.join(process.cwd(), `/build/ssl/${process.env.APP_DOMAIN}.csr`), 'utf8'),
+// }
+
 app.use(compression());
 app.use(bodyParser.json());
 
@@ -31,8 +57,6 @@ app.use(function (req, res, next) {
 });
 
 app.use(express.static('build/public'));
-
-const PORT = process.env.APP_PORT || 8080;
 
 app.get('*', (request, response) => {
     let status = 200;
@@ -61,6 +85,10 @@ app.get('*', (request, response) => {
     }));
 });
 
-app.listen(PORT, () => {
-    console.log(`Server is now running on port: ${PORT}`);
+http.createServer(app).listen(PORT, () => {
+    console.log(`HTTP Server is now running on port: ${PORT}`);
 });
+
+// https.createServer(options, app).listen(PORT_SSL, () => {
+//     console.log(`HTTPS Server is now running on port: ${PORT_SSL}`);
+// });

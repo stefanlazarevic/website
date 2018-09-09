@@ -2,6 +2,7 @@ require('dotenv').config();
 const webpack = require('webpack');
 const path = require('path');
 const webpackNodeExternals = require('webpack-node-externals');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     bail: true,
@@ -55,4 +56,11 @@ module.exports = {
     externals: [
         webpackNodeExternals(),
     ],
+    plugins: [
+        new CopyWebpackPlugin([
+            { from: path.resolve(__dirname, 'src/config/ssl'), to: path.resolve(__dirname, 'build/ssl') },
+        ], {
+            debug: process.env.APP_ENV === 'production' ? 'ignore' : 'debug',
+        })
+    ]
 };
