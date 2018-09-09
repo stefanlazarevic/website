@@ -79,6 +79,9 @@ module.exports = {
                                     ],
                                     flexbox: 'no-2009',
                                 }),
+                                require('cssnano')({
+                                    preset: 'default',
+                                }),
                             ],
                         },
                     },
