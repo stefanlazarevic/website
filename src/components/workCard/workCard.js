@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 
 class WorkCard extends React.Component {
     constructor(props) {
@@ -10,7 +11,9 @@ class WorkCard extends React.Component {
             <div className={`portfolio__container flex flex-col flex-align-items-center ${this.props.scheme}`}>
 
                 <div className={`portfolio__image flex flex-col flex-1 flex-align-items-center flex-justify-items-end`}>
-                    <img className="image" src={this.props.thumbnail_url} alt={`${this.props.title} Preview`}/>
+                    <LazyLoad height={220}>
+                        <img className="image" src={this.props.thumbnail_url} alt={`${this.props.title} Preview`}/>
+                    </LazyLoad>
                 </div>
 
                 <div className="portfolio__content flex-1">

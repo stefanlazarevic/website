@@ -7,7 +7,6 @@ export default class Company extends React.Component {
             <div className="company">
                 <h3 className="company__title">
                     <span>{experience.TITLE}</span>
-                    <i className="fas fa-external-link-alt"></i>
                     &nbsp;
                     <span>
                         <em>
@@ -21,17 +20,17 @@ export default class Company extends React.Component {
                 </h3>
                 <h4 className="company__subtitle">About:</h4>
                 <div className="company__about">
-                    <p>{experience.ABOUT_COMPANY}</p>
+                    <p dangerouslySetInnerHTML={{ __html: experience.ABOUT_COMPANY }}></p>
                 </div>
                 <h4 className="company__subtitle">Positions:</h4>
                 <div className="company__roles">
                     {
                         experience.POSITIONS.map((role, index) => (
                             <div key={index} className="company__role">
-                                <h5 className="company-role__title js-details">
+                                <h5 className="company-role__title">
                                     <span>{role.TITLE}</span>
                                 </h5>
-                                <p className="company-role__description js-summary">
+                                <p className="company-role__description">
                                     <span dangerouslySetInnerHTML={{ __html: role.MY_ROLE }}></span>
                                 </p>
                             </div>
