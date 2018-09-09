@@ -58,7 +58,8 @@ class WorkPage extends React.Component {
                                                 live_url={work.LIVE_URL}
                                                 github_url={work.GITHUB_URL}
                                                 tags={work.TAGS}
-                                                />
+                                                lazy={index}
+                                            />
                                     </div>
                                 )
                             })}

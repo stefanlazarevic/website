@@ -128,7 +128,11 @@ export default (options) =>
             link.rel = "stylesheet";
             head.appendChild(link);
         })();
+        (function() {
+            var links = document.querySelectorAll('[data-href]');
+            links.forEach(l => l.addEventListener('click', e => window.location = l.dataset.href));
+        })();
     </script>
-    <script src="/js/client.min.js"></script>
+    <script defer src="/js/client.min.js"></script>
 </body>
 </html>`

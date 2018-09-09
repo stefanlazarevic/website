@@ -11,9 +11,13 @@ class WorkCard extends React.Component {
             <div className={`portfolio__container flex flex-col flex-align-items-center ${this.props.scheme}`}>
 
                 <div className={`portfolio__image flex flex-col flex-1 flex-align-items-center flex-justify-items-end`}>
-                    <LazyLoad height={220}>
-                        <img className="image" src={this.props.thumbnail_url} alt={`${this.props.title} Preview`}/>
-                    </LazyLoad>
+                    {
+                        this.props.lazy ? (
+                            <LazyLoad className="image">
+                                <img className="image" src={this.props.thumbnail_url} alt={`${this.props.title} Preview`}/>
+                            </LazyLoad>
+                        ) : <img className="image" src={this.props.thumbnail_url} alt={`${this.props.title} Preview`} />
+                    }
                 </div>
 
                 <div className="portfolio__content flex-1">
@@ -28,14 +32,10 @@ class WorkCard extends React.Component {
 
                     <div className="portfolio__footer">
                         { this.props.live_url ? (
-                            <a href={this.props.live_url}>
-                                <i className="fas fa-globe"></i>
-                            </a>
+                            <i className="fas fa-globe" data-href={this.props.live_url}></i>
                         ) : null }
                         { this.props.github_url ? (
-                            <a href={this.props.github_url}>
-                                <i className="fab fa-github"></i>
-                            </a>
+                            <i className="fab fa-github" data-href={this.props.github_url}></i>
                         ) : null }
                     </div>
                 </div>
