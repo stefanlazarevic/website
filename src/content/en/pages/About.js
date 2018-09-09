@@ -18,9 +18,9 @@ export default {
     `,
     PAGE_NAVIGATION: {
         BACK_BUTTON_TEXT: 'Back to home',
-        BACK_BUTTON_LINK: Routes.HOME,
-        FORWARD_BUTTON_TEXT: 'Go to work',
-        FORWARD_BUTTON_LINK: Routes.WORK
+        BACK_BUTTON_LINK: Routes.INDEX,
+        FORWARD_BUTTON_TEXT: 'Go to Portfolio',
+        FORWARD_BUTTON_LINK: Routes.PORTFOLIO
     },
     SEO: {
         DESCRIPTION: 'Read more about who Stefan Lazarevic is and what he does.',

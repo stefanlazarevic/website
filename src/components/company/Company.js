@@ -13,7 +13,7 @@ export default class Company extends React.Component {
                             ({
                                 experience.START_DATE.getFullYear() === experience.END_DATE.getFullYear() ?
                                     experience.START_DATE.getFullYear() :
-                                    `${experience.START_DATE.getFullYear()} - ${experience.END_DATE.getFullYear()}`
+                                    `${experience.START_DATE.getFullYear()} - ${new Date().getDate() === experience.END_DATE.getDate() ? 'Present' : experience.END_DATE.getFullYear()}`
                             })
                         </em>
                     </span>

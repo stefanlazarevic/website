@@ -1,19 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-
-import env from '../../config/env.client';
-import ContentController from '../../content/ContentController';
 import PageHeader from '../../components/pageHeader/PageHeader';
+import Routes from '../../constants/Routes';
+import ContentController from '../../content/ContentController';
 import PageNavigation from '../../components/pageNavigation/PageNavigation';
-import WorkCard from '../../components/workCard/workCard';
+import Company from '../../components/company/Company';
 import PageFooter from '../../components/pageFooter/pageFooter';
 
+import env from '../../config/env.client';
 class WorkPage extends React.Component {
-
-    constructor() {
-        super();
-        this.Content = {};
-    }
 
     componentWillMount() {
         if (typeof (window) !== 'undefined') {
@@ -27,41 +22,37 @@ class WorkPage extends React.Component {
         return (
             <Helmet>
                 <title>{env.APP_BASE_TITLE} | {this.Content.PAGE_TITLE}</title>
-                <meta name="description" content={this.Content.SEO.DESCRIPTION} />
-                <meta name="keywords" content="stefan, developer, web" />
+                <meta name="description" content={this.Content.SEO.DESCRIPTION}></meta>
+                <meta name="keywords" content={this.Content.SEO.KEYWORDS}></meta>
                 <style>{this.Content.CRITICAL_CSS}</style>
-                <link rel="canonical" href={env.APP_BASE_URL} />
+                <link rel="canonical" href={`${env.APP_BASE_URL}${Routes.WORK}`} />
             </Helmet>
         )
     }
 
     render() {
         return (
-            <section id="about">
-                {this.head()}
+            <section id="work">
+                { this.head() }
                 <PageHeader />
-                <div id="work-main">
+                <div>
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
-                                <h2 className="page__title text--center text-md--left">{this.Content.PAGE_TITLE}</h2>
+                                <h2 className="page__title text--center text-md--left">
+                                    <span>{this.Content.PAGE_TITLE}</span>
+                                </h2>
                             </div>
                         </div>
                         <div className="row">
-                            {this.Content.WORK.map((work, index) => {
-                                return (
-                                    <div key={index} className="col-12">
-                                        <WorkCard title={work.TITLE}
-                                                thumbnail_url={work.THUMBNAIL_URL}
-                                                description={work.DESCRIPTION}
-                                                scheme={work.SCHEME_CLASS}
-                                                live_url={work.LIVE_URL}
-                                                github_url={work.GITHUB_URL}
-                                                tags={work.TAGS}
-                                                />
-                                    </div>
-                                )
-                            })}
+                            <div className="col-12 col-md-8">
+                                {
+                                    this.Content.EXPERIENCE.map(
+                                        (experience, index) => <Company key={index} experience={experience} />
+                                    )
+                                }
+                            </div>
+                            <div className="col-md-4 text--right"></div>
                         </div>
                         <PageNavigation prevLink={this.Content.PAGE_NAVIGATION.BACK_BUTTON_LINK}
                             prevText={this.Content.PAGE_NAVIGATION.BACK_BUTTON_TEXT}

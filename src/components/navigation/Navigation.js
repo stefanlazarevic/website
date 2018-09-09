@@ -31,13 +31,13 @@ class Navigation extends React.Component {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to={Routes.WORK} activeClassName='active' className="navigation__link role-link">
-                            <span>{this.Content.WORK}</span>
+                        <NavLink to={Routes.PORTFOLIO} activeClassName='active' className="navigation__link role-link">
+                            <span>{this.Content.PORTFOLIO}</span>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to={Routes.EXPERIENCE} activeClassName='active' className="navigation__link role-link">
-                            <span>{this.Content.EXPERIENCE}</span>
+                        <NavLink to={Routes.WORK} activeClassName='active' className="navigation__link role-link">
+                            <span>{this.Content.WORK}</span>
                         </NavLink>
                     </li>
                     <li>
