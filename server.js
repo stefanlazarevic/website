@@ -51,7 +51,7 @@ app.get('*', (request, response) => {
 
     const helmet = Helmet.renderStatic();
 
-    res.charset = 'UTF-8';
+    response.charset = 'UTF-8';
     response.status(status).send(pageHTML({
         style: helmet.style.toString(),
         links: helmet.link.toString(),
