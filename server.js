@@ -1,3 +1,4 @@
+require('dotenv').config();
 import 'babel-polyfill';
 import express from 'express';
 import bodyParser from 'body-parser';
@@ -50,6 +51,7 @@ app.get('*', (request, response) => {
 
     const helmet = Helmet.renderStatic();
 
+    res.charset = 'UTF-8';
     response.status(status).send(pageHTML({
         style: helmet.style.toString(),
         links: helmet.link.toString(),
@@ -60,5 +62,5 @@ app.get('*', (request, response) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server running on port: ${PORT}`);
+    console.log(`Server is now running on port: ${PORT}`);
 });

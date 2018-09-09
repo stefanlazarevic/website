@@ -1,8 +1,10 @@
 require('dotenv').config();
+
 const webpack = require('webpack');
 const path = require('path');
 const autoprefixer = require('autoprefixer');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
     bail: true,
@@ -95,4 +97,12 @@ module.exports = {
         })
     ],
     externals: [],
+    optimization: {
+        minimizer: [
+            new UglifyJsPlugin({
+                sourceMap: process.env.APP_ENV === 'development',
+                extractComments: process.env.APP_ENV === 'production'
+            })
+        ]
+    }
 };

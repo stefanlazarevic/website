@@ -1,5 +1,5 @@
 export default {
     APP_AUTHOR: 'Stefan Lazarevic',
     APP_BASE_TITLE: 'Stefan Lazarevic - Full Stack Web Developer and Javascript Engineer',
-    APP_BASE_URL: 'https://amazing-jepsen-01cdf5.netlify.com/',
+    APP_BASE_URL: 'http://localhost:8080',
 }

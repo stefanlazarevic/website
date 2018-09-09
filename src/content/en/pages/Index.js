@@ -8,7 +8,7 @@ export default {
     ACTION_BUTTON_TEXT: `More about me`,
     SEO: {
         DESCRIPTION: `
-            Stefan Lazarevic, a experienced web developer specialized in web technologies and Javascript programming language. Currently based in capital of Serbia.
+            Stefan Lazarevic, an experienced web developer specialized in web technologies and Javascript programming language.
         `,
         KEYWORDS: 'stefan, developer, web',
     },

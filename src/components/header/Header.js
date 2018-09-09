@@ -32,12 +32,12 @@ class Header extends React.Component {
                                 <span>&nbsp;</span>
                                 <span className="text--bold text--orange">Lazarevic</span>
                             </Link>
-                            <div className={`hamburger ${this.state.navigationExpanded ? 'active' : ''}`} onClick={this.expandNavigation}>
-                                <div className="bar1"></div>
-                                <div className="bar2"></div>
-                                <div className="bar3"></div>
-                            </div>
                         </h1>
+                        <div className={`hamburger ${this.state.navigationExpanded ? 'active' : ''}`} onClick={this.expandNavigation}>
+                            <div className="bar1"></div>
+                            <div className="bar2"></div>
+                            <div className="bar3"></div>
+                        </div>
                     </div>
                     <div className="col-sm-12 col-md-9 text-right">
                         <Navigation expanded={this.state.navigationExpanded}/>
