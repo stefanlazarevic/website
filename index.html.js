@@ -28,7 +28,6 @@ export default (options) =>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="author" content="${env.APP_AUTHOR}" />
     <meta name="name" content="Stefan Lazarevic - Web Developer">
-    <base href="${env.APP_BASE_URL}" />
     <meta name="short_name" content="Stefan L." />
     <link rel="icon" type="image/png" sizes="192x192" href="/icons/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
