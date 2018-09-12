@@ -9,8 +9,8 @@ export default {
         FORWARD_BUTTON_LINK: Routes.WORK
     },
     SEO: {
-        DESCRIPTION: '',
-        KEYWORDS: '',
+        DESCRIPTION: 'See Stefan\'s list of projects on his portfolio page and start developing your new project with him today.',
+        KEYWORDS: 'stefan, lazarevic, web, portfolio, projects, work',
     },
     WORK: [
         {

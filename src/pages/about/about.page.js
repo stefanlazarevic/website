@@ -1,5 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import ReactGA from 'react-ga';
+
 import ContentController from '../../content/ContentController';
 import Routes from '../../constants/Routes';
 import PageNavigation from '../../components/pageNavigation/PageNavigation';
@@ -19,6 +21,10 @@ class AboutPage extends React.Component {
         }
 
         this.Content = ContentController.getContentForLanguage('en').about;
+    }
+
+    componentDidMount() {
+        ReactGA.pageview(Routes.ABOUT);
     }
 
     head() {

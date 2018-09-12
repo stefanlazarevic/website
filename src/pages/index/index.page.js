@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import ReactGA from 'react-ga';
 
 import Routes from '../../constants/Routes';
 import ContentController from '../../content/ContentController';
@@ -16,6 +17,10 @@ class IndexPage extends React.Component {
 
     componentWillMount() {
         this.Content = ContentController.getContentForLanguage('en').index;
+    }
+
+    componentDidMount() {
+        ReactGA.pageview(Routes.INDEX);
     }
 
     head() {

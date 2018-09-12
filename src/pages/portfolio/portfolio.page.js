@@ -1,13 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import ReactGA from 'react-ga';
 
-import env from '../../config/env.client';
 import ContentController from '../../content/ContentController';
 import PageHeader from '../../components/pageHeader/PageHeader';
 import PageNavigation from '../../components/pageNavigation/PageNavigation';
 import WorkCard from '../../components/workCard/workCard';
 import PageFooter from '../../components/pageFooter/pageFooter';
 
+import env from '../../config/env.client';
+import Routes from '../../constants/Routes';
 class WorkPage extends React.Component {
 
     constructor() {
@@ -23,6 +25,10 @@ class WorkPage extends React.Component {
         this.Content = ContentController.getContentForLanguage('en').portfolio;
     }
 
+    componentDidMount() {
+        ReactGA.pageview(Routes.PORTFOLIO);
+    }
+
     head() {
         return (
             <Helmet>
@@ -30,7 +36,7 @@ class WorkPage extends React.Component {
                 <meta name="description" content={this.Content.SEO.DESCRIPTION} />
                 <meta name="keywords" content="stefan, developer, web" />
                 <style>{this.Content.CRITICAL_CSS}</style>
-                <link rel="canonical" href={env.APP_BASE_URL} />
+                <link rel="canonical" href={`${env.APP_BASE_URL}${Routes.PORTFOLIO}`} />
             </Helmet>
         )
     }

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import ReactGA from 'react-ga';
+
 import PageHeader from '../../components/pageHeader/PageHeader';
 import Routes from '../../constants/Routes';
 import ContentController from '../../content/ContentController';
@@ -16,6 +18,10 @@ class WorkPage extends React.Component {
         }
 
         this.Content = ContentController.getContentForLanguage('en').work;
+    }
+
+    componentDidMount() {
+        ReactGA.pageview(Routes.WORK);
     }
 
     head() {

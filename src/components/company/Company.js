@@ -7,7 +7,7 @@ export default class Company extends React.Component {
             <div className="company">
                 <h3 className="company__title">
                     <span>{experience.TITLE}</span>
-                    &nbsp;
+                    <br />
                     <span>
                         <em>
                             ({
@@ -30,8 +30,7 @@ export default class Company extends React.Component {
                                 <h5 className="company-role__title">
                                     <span>{role.TITLE}</span>
                                 </h5>
-                                <p className="company-role__description">
-                                    <span dangerouslySetInnerHTML={{ __html: role.MY_ROLE }}></span>
+                                <p className="company-role__description" dangerouslySetInnerHTML={{ __html: role.MY_ROLE }}>
                                 </p>
                             </div>
                         ))

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import ReactGA from 'react-ga';
+
 import PageHeader from '../../components/pageHeader/PageHeader';
 import RouteTitles from '../../constants/RouteTitles';
 import RoutesExternal from '../../constants/RoutesExternal';
@@ -17,6 +19,10 @@ class ContactPage extends React.Component {
 
     componentWillMount() {
         this.Content = ContentController.getContentForLanguage('en').contact;
+    }
+
+    componentDidMount() {
+        ReactGA.pageview(Routes.CONTACT);
     }
 
     head() {
@@ -41,14 +47,13 @@ class ContactPage extends React.Component {
                         <div className="row">
                             <div className="col-12">
                                 <h2 className="page__title text--center text-md--left">
-                                    <span>{this.Content.PAGE_TITLE}</span>
+                                    {this.Content.PAGE_TITLE}
                                 </h2>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-xs-12 col-md-6">
-                                <p className="contact__paragraph text--center text-md--left">
-                                    <span dangerouslySetInnerHTML={{ __html: this.Content.CONTACT_ME_TEXT }}></span>
+                                <p className="contact__paragraph text--center text-md--left" dangerouslySetInnerHTML={{ __html: this.Content.CONTACT_ME_TEXT }}>
                                 </p>
                             </div>
                             <div className="col-xs-12 col-md-6">
