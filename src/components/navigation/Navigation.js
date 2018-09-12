@@ -24,7 +24,7 @@ class Navigation extends React.Component {
     render() {
         return (
             <nav id="navigation" className={this.state.expanded ? 'active' : ''}>
-                <ul className="navigation__list text--center text-md--right">
+                <ul className="navigation__list f-text-left f-sm-text-center f-md-text-right">
                     <li>
                         <NavLink to={Routes.ABOUT} className="navigation__link role-link">
                             <span>{this.Content.ABOUT}</span>

@@ -103,6 +103,7 @@ export default (options) =>
     <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
 
     <link href="/css/styles.min.css" rel="stylesheet" />
+    <link href="/css/flexbox-layout.css" rel="stylesheet" />
 
     ${options.links}
 

@@ -42,7 +42,43 @@ class ContactPage extends React.Component {
             <section id="contact">
                 { this.head() }
                 <PageHeader />
-                <div>
+                <div className="f-grid">
+                    <div className="f-col-12">
+                        <h2 className="page__title f-text-center f-md-text-left">
+                            {this.Content.PAGE_TITLE}
+                        </h2>
+                    </div>
+                    <div className="f-col-12 f-md-col-6">
+                        <p className="contact__paragraph f-text-center f-md-text-left" dangerouslySetInnerHTML={{ __html: this.Content.CONTACT_ME_TEXT }}>
+                        </p>
+                    </div>
+                    <div className="f-col-12 f-md-col-6">
+                        <h4 className="text--thin text--center">or connect with me on social networks</h4>
+                        <div className="social f-text-center">
+                            <a href={RoutesExternal.LINKEDIN} title={RouteTitles.LINKEDIN}>
+                                <i className="fab fa-linkedin"></i>
+                            </a>
+                            <a href={RoutesExternal.GITHUB} title={RouteTitles.GITHUB}>
+                                <i className="fab fa-github"></i>
+                            </a>
+                            <a href={RoutesExternal.SKYPE} title={RouteTitles.SKYPE}>
+                                <i className="fab fa-skype"></i>
+                            </a>
+                            <a href={RoutesExternal.GOOGLE} title={RouteTitles.GOOGLE}>
+                                <i className="fab fa-google-plus-g"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div className="f-col-12">
+                        <PageNavigation prevLink={this.Content.PAGE_NAVIGATION.BACK_BUTTON_LINK}
+                            prevText={this.Content.PAGE_NAVIGATION.BACK_BUTTON_TEXT}
+                            nextLink={this.Content.PAGE_NAVIGATION.FORWARD_BUTTON_LINK}
+                            nextText={this.Content.PAGE_NAVIGATION.FORWARD_BUTTON_TEXT}
+                        />
+                    </div>
+                </div>
+
+                {/* <div>
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
@@ -80,7 +116,7 @@ class ContactPage extends React.Component {
                             nextText={this.Content.PAGE_NAVIGATION.FORWARD_BUTTON_TEXT}
                         />
                     </div>
-                </div>
+                </div> */}
                 <PageFooter />
             </section>
         );

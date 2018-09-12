@@ -23,9 +23,9 @@ class Header extends React.Component {
 
     render() {
         return (
-            <header id="header">
-                <div className="row">
-                    <div className="col-sm-12 col-md-3 text--left text-sm--center text-md--left">
+            <header id="header" className="f-col-12">
+                <div className="f-grid">
+                    <div className="f-col-12 f-text-left f-sm-text-center f-md-col-6 f-md-text-left">
                         <h1 className="logo">
                             <Link to={Routes.HOME} className="text--gray">
                                 <span className="text--thin">Stefan</span>
@@ -39,7 +39,7 @@ class Header extends React.Component {
                             <div className="bar3"></div>
                         </div>
                     </div>
-                    <div className="col-sm-12 col-md-9 text-right">
+                    <div className="f-col-auto">
                         <Navigation expanded={this.state.navigationExpanded}/>
                     </div>
                 </div>

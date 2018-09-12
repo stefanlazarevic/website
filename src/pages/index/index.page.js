@@ -39,14 +39,14 @@ class IndexPage extends React.Component {
         return (
             <section id="index">
                 { this.head() }
-                <div className="triangle-bottomright"></div>
-                <div className="triangle-topleft"></div>
-                <div className="container">
+                <div className="triangle-bottomright f-layer-1"></div>
+                <div className="triangle-topleft f-layer-1"></div>
+                <div className="f-grid f-layer-2">
                     <Header />
-                    <div id="main">
-                        <div className="row">
-                            <div className="col-sm-12 col-md-6 col-md-push-6">
-                                <div className="text--center text-md--right">
+                    <div id="main" className="f-col-12">
+                        <div className="f-grid">
+                            <div className="f-col-12 f-md-col-6 f-order-1 f-md-order-2">
+                                <div className="f-text-center f-md-text-right">
                                     <picture>
                                         <source srcSet="img/stefanlazarevic.webp" type="image/webp" />
                                         <source srcSet="img/stefanlazarevic.jpg" type="image/jpeg" />
@@ -54,16 +54,16 @@ class IndexPage extends React.Component {
                                     </picture>
                                 </div>
                             </div>
-                            <div className="col-sm-12 col-md-6 col-md-pull-6">
-                                <h2 className="page__title--large text--center text-md--left">
+                            <div className="f-col-12 f-md-col-6 f-order-2 f-md-order-1">
+                                <h2 className="page__title--large f-text-center f-md-text-left">
                                     <span className="text--thin text--white">Full Stack&nbsp;</span>
                                     <br />
                                     <span className="text--orange">Web developer</span>
                                 </h2>
-                                <p className="text--gray index__paragraph text--center text-md--left">
+                                <p className="text--gray index__paragraph f-text-center f-md-text-left">
                                     <span dangerouslySetInnerHTML={{ __html: this.Content.INTRODUCTION }}></span>
                                 </p>
-                                <div className="text--center text-md--left">
+                                <div className="f-text-center f-md-text-left">
                                     <Link to={Routes.ABOUT} className="index__button">
                                         <span>{this.Content.ACTION_BUTTON_TEXT}</span>
                                     </Link>
