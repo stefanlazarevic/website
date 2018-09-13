@@ -2,7 +2,7 @@
 
 This is my personal website that describes who I am and what I do.
 
-You can visit it live at: ``https://``
+You can visit it live at: [lazarevicstefan.com](http://lazarevicstefan.com)
 
 ---
 
@@ -23,7 +23,7 @@ You can visit it live at: ``https://``
 - Add critical css into styles. ✓
 - Add metadata. ✓
 - Add favicon. ✓
-- Create projects page.
+- Create portfolio page. ✓
 - Create Experience page. ✓
 - Create blog page.
 - Validate SEO.
@@ -31,8 +31,9 @@ You can visit it live at: ``https://``
 - Integrate night theme.
 - Add Serbian version of website.
 - Integrate website with Travis CI for continuous integration.
-- Get domain and hosting and publish webiste.
+- Get domain and hosting and publish webiste. ✓
 - Add Responsive navigation. ✓
+- Unblock crawlers and enable site indexing. 
 
 ---
 
