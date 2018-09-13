@@ -3,22 +3,25 @@ import Routes from "../../../constants/Routes";
 export default {
     PAGE_TITLE: 'My portfolio',
     PAGE_NAVIGATION: {
-        BACK_BUTTON_TEXT: 'Back to about',
+        BACK_BUTTON_TEXT: '<span class="hide-on-mobile">Back to</span> About',
         BACK_BUTTON_LINK: Routes.ABOUT,
-        FORWARD_BUTTON_TEXT: 'Go to work',
-        FORWARD_BUTTON_LINK: Routes.WORK
+        FORWARD_BUTTON_TEXT: '<span class="hide-on-mobile">Go to</span> Experience',
+        FORWARD_BUTTON_LINK: Routes.EXPERIENCE
     },
     SEO: {
         DESCRIPTION: 'See Stefan\'s list of projects on his portfolio page and start developing your new project with him today.',
         KEYWORDS: 'stefan, lazarevic, web, portfolio, projects, work',
     },
+    CRITICAL_CSS: `
+
+    `,
     WORK: [
         {
             TITLE: 'Deluxe - Direct to Debut',
             SCHEME_CLASS: 'd2d-scheme',
             LIVE_URL: 'https://www.bydeluxe.com/en/one/',
             GITHUB_URL: '',
-            THUMBNAIL_URL: '/img/portfolio/d2d-deluxe-optimized.png',
+            THUMBNAIL_URL: '/img/portfolio/d2d-deluxe-optimized',
             DESCRIPTION: 'Platform that automates movie trailer publication in 86 destination through partner websites and social networks such as Facebook, Youtube and Twitter.',
             TAGS: [
                 'Laravel',
@@ -36,7 +39,7 @@ export default {
             SCHEME_CLASS: 'portfolio-scheme',
             LIVE_URL: '',
             GITHUB_URL: 'https://github.com/stefanlazarevic/website',
-            THUMBNAIL_URL: '/img/portfolio/my-portfolio-optimized.png',
+            THUMBNAIL_URL: '/img/portfolio/my-portfolio-optimized',
             DESCRIPTION: 'Well...',
             TAGS: [
                 'React',
@@ -51,7 +54,7 @@ export default {
             SCHEME_CLASS: 'signature-scheme',
             LIVE_URL: 'https://stefanlazarevic.github.io/signature-creator/',
             GITHUB_URL: 'https://github.com/stefanlazarevic/signature-creator',
-            THUMBNAIL_URL: '/img/portfolio/signature-creator-optimized.png',
+            THUMBNAIL_URL: '/img/portfolio/signature-creator-optimized',
             DESCRIPTION: 'Simple custom signature image creator written in pure Javascript.',
             TAGS: [
                 'Html',
@@ -65,7 +68,7 @@ export default {
             SCHEME_CLASS: 'autominer-scheme',
             LIVE_URL: 'https://theautominer.com/',
             GITHUB_URL: '',
-            THUMBNAIL_URL: '/img/portfolio/theautominer-optimized.png',
+            THUMBNAIL_URL: '/img/portfolio/theautominer-optimized',
             DESCRIPTION: 'Sales application for the automobile industry. It allows users to target audiences precisely, generate new leads and enhance customer retention. Autominer automatically tracks calls and messages initiated within the app, streamlining analysis and followup.',
             TAGS: [
                 'Laravel',
@@ -83,7 +86,7 @@ export default {
             SCHEME_CLASS: 'threedium-scheme',
             LIVE_URL: 'https://threedium.co.uk/',
             GITHUB_URL: '',
-            THUMBNAIL_URL: '/img/portfolio/threedium-optimized.png',
+            THUMBNAIL_URL: '/img/portfolio/threedium-optimized',
             DESCRIPTION: 'Portfolio website for 3D advertising company.',
             TAGS: [
                 'Laravel',
@@ -99,7 +102,7 @@ export default {
             SCHEME_CLASS: 'jseasy-scheme',
             LIVE_URL: 'https://stefanlazarevic.github.io/jseasy/0.1.0/',
             GITHUB_URL: 'https://github.com/stefanlazarevic/jseasy',
-            THUMBNAIL_URL: '/img/portfolio/jseasy-optimized.png',
+            THUMBNAIL_URL: '/img/portfolio/jseasy-optimized',
             DESCRIPTION: 'Collection of functions written in FP style inspired by legendary underscore.js',
             TAGS: [
                 'ES6',
@@ -114,7 +117,7 @@ export default {
             SCHEME_CLASS: 'meinunfall-scheme',
             LIVE_URL: 'https://www.meinunfallauto.de/',
             GITHUB_URL: '',
-            THUMBNAIL_URL: '/img/portfolio/meinunfallauto-optimized.png',
+            THUMBNAIL_URL: '/img/portfolio/meinunfallauto-optimized',
             DESCRIPTION: 'Meinunfallauto is one of the lead portals about damaged automobiles on Austrian and German market.',
             TAGS: [
                 'Laravel',
@@ -133,7 +136,7 @@ export default {
             SCHEME_CLASS: 'rentacar-scheme',
             LIVE_URL: 'https://fudeksrentacar.rs/',
             GITHUB_URL: '',
-            THUMBNAIL_URL: '/img/portfolio/fudeks-rentacar-optimized.png',
+            THUMBNAIL_URL: '/img/portfolio/fudeks-rentacar-optimized',
             DESCRIPTION: 'Application that helps users quickly rent a car in capital of Serbia.',
             TAGS: [
                 'Laravel',

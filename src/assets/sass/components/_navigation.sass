@@ -12,6 +12,8 @@
             height: auto
 
 .navigation__list
+    @media #{$sm}
+        margin-bottom: 10px
     li
         display: block
         list-style: none
@@ -45,16 +47,16 @@
     display: block
     float: right
     cursor: pointer
-    margin-top: 15px
+    margin-top: 18px
     div
         pointer-events: none
         width: 25px
         height: 4px
-        background-color: white
+        background-color: $white
         margin: 3px 0
     &:focus
         div
-            background-color: #f09f44
+            background-color: $orange
     @media #{$sm}
         display: none
 

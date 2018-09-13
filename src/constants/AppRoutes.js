@@ -3,7 +3,7 @@ import Routes from './Routes';
 import IndexPage from '../pages/index/index.page';
 import AboutPage from '../pages/about/about.page';
 import PortfolioPage from '../pages/portfolio/portfolio.page';
-import WorkPage from '../pages/work/work.page';
+import ExperiencePage from '../pages/experience/experience.page';
 import ContactPage from '../pages/contact/contact.page';
 import NotFoundPage from '../pages/errors/404.page';
 
@@ -34,9 +34,9 @@ const routes = [
         component: PortfolioPage
     },
     {
-        path: buildStaticPaths(Routes.WORK),
+        path: buildStaticPaths(Routes.EXPERIENCE),
         exact: true,
-        component: WorkPage
+        component: ExperiencePage
     },
     {
         path: buildStaticPaths(Routes.CONTACT),

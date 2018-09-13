@@ -45,47 +45,45 @@ class AboutPage extends React.Component {
                 {this.head()}
                 <PageHeader />
                 <div id="about-main">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-12 col-md-5 col-md-push-7 text--center text-md--right">
+                    <div className="f-grid">
+                        <div className="f f-dir-col f-md-dir-row-rev">
+                            <div className="f-col-12 f-md-col-5 f-text-center f-md-text-right">
                                 <picture>
                                     <source srcSet="/img/stefanlazarevic.webp" type="image/webp" />
                                     <source srcSet="/img/stefanlazarevic.jpg" type="image/jpeg" />
                                     <img src="/img/stefanlazarevic.jpg" alt="Stefan Lazarevic" className="about__image" />
                                 </picture>
                             </div>
-                            <div className="col-12 col-md-7 col-md-pull-5">
-                                <h2 className="page__title text--center text-md--left">{this.Content.ABOUT_ME_TITLE}</h2>
-                                <p className="about__paragraph text--center text-md--left">
+                            <div className="f-col-12 f-md-col-7 f-text-center f-md-text-left">
+                                <h2 className="page__title">{this.Content.ABOUT_ME_TITLE}</h2>
+                                <p className="about__paragraph">
                                     <span dangerouslySetInnerHTML={{ __html: this.Content.ABOUT_ME }}></span>
                                 </p>
                             </div>
                         </div>
-                        <div className="row">
-                            <div className="col-12">
-                                <h3 className="page__subtitle text--center text-md--left">
-                                    <span>{this.Content.BRIEF_HISTORY_TITLE}</span>
-                                </h3>
-                                <p className="about__paragraph text--center text-md--left">
-                                    <span dangerouslySetInnerHTML={{ __html: this.Content.BRIEF_HISTORY }}></span>
-                                </p>
-                            </div>
+                        <div className="f-col-12">
+                            <h3 className="page__subtitle f-text-center f-md-text-left">
+                                <span>{this.Content.BRIEF_HISTORY_TITLE}</span>
+                            </h3>
+                            <p className="about__paragraph f-text-center f-md-text-left">
+                                <span dangerouslySetInnerHTML={{ __html: this.Content.BRIEF_HISTORY }}></span>
+                            </p>
                         </div>
-                        <div className="row">
-                            <div className="col-12">
-                                <h3 className="page__subtitle text--center text-md--left">
-                                    <span>{this.Content.WEB_DEVELOPMENT_TITLE}</span>
-                                </h3>
-                                <p className="about__paragraph text--center text-md--left">
-                                    <span dangerouslySetInnerHTML={{ __html: this.Content.WEB_DEVELOPMENT }}></span>
-                                </p>
-                            </div>
+                        <div className="f-col-12">
+                            <h3 className="page__subtitle f-text-center f-md-text-left">
+                                <span>{this.Content.WEB_DEVELOPMENT_TITLE}</span>
+                            </h3>
+                            <p className="about__paragraph f-text-center f-md-text-left">
+                                <span dangerouslySetInnerHTML={{ __html: this.Content.WEB_DEVELOPMENT }}></span>
+                            </p>
                         </div>
-                        <PageNavigation prevLink={this.Content.PAGE_NAVIGATION.BACK_BUTTON_LINK}
-                            prevText={this.Content.PAGE_NAVIGATION.BACK_BUTTON_TEXT}
-                            nextLink={this.Content.PAGE_NAVIGATION.FORWARD_BUTTON_LINK}
-                            nextText={this.Content.PAGE_NAVIGATION.FORWARD_BUTTON_TEXT}
-                        />
+                        <div className="f-col-12">
+                            <PageNavigation prevLink={this.Content.PAGE_NAVIGATION.BACK_BUTTON_LINK}
+                                prevText={this.Content.PAGE_NAVIGATION.BACK_BUTTON_TEXT}
+                                nextLink={this.Content.PAGE_NAVIGATION.FORWARD_BUTTON_LINK}
+                                nextText={this.Content.PAGE_NAVIGATION.FORWARD_BUTTON_TEXT}
+                            />
+                        </div>
                     </div>
                 </div>
                 <PageFooter />

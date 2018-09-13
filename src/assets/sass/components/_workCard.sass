@@ -1,96 +1,20 @@
-.flex
-    display: flex
-
-.flex-inline
-    display: inline-flex
-
-.flex__container
-    padding: 0 15px
-
-.flex-row
-    flex-direction: row
-    margin: 0 -15px
-    &-reverse
-        @extend .flex-row
-        flex-direction: row-reverse
-
-.flex-col
-    flex-direction: column
-    &-reverse
-        flex-direction: column-reverse
-
-@for $i from 1 through 12
-    .flex-#{$i}
-        flex: #{$i}
-    .flex-order-#{$i}
-        order: #{$i}
-
-.flex-align-content
-    &-start
-        align-content: flex-start
-    &-end
-        align-content: flex-end
-    &-center
-        align-content: center
-    &-space-between
-        align-content: space-between
-    &-space-around
-        align-content: space-around
-    &-stretch
-        align-content: stretch
-
-.flex-align-items
-    &-start
-        align-items: flex-start
-    &-end
-        align-items: flex-end
-    &-center
-        align-items: center
-    &-space-between
-        align-items: space-between
-    &-space-around
-        align-items: space-around
-    &-stretch
-        align-items: stretch
-
-.flex-justify-content
-    &-space-around
-        justify-content: space-around
-
-.flex-justify-items
-    &-start
-        justify-items: start
-    &-end
-        justify-items: end
-    &-center
-        justify-items: center
-
-.flex-wrap
-    flex-wrap: wrap
-    &-reverse
-        flex-wrap: wrap-reverse
-
-
 .portfolio__container
     margin-bottom: 40px
     border-radius: 7px
-    align-items: start
-    @media #{$md}
-        flex-direction: row
-        align-items: center
+    overflow: hidden
 
 .portfolio__image
     overflow: hidden
     border-top-left-radius: 7px
     border-top-right-radius: 7px
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    transform: translateY(5px)
+    @media #{$md}
+        margin-top: 4em
+        max-width: 80%
     .image
         border-top-left-radius: 7px
         border-top-right-radius: 7px
-        box-shadow: 0 5px 30px 0 rgba(0,0,0,.4), 0 5px 15px 0 rgba(0,0,0,.2)
-        @media #{$md}
-            transform: translateY(5px)
-            margin-top: 4em
-            max-width: 80%
 
 .portfolio__content
     padding: 0 15px 20px
@@ -113,6 +37,17 @@
         margin-right: 10px
         font-size: 1.5em
 
+[class*="-scheme"]
+    border-radius: 7px
+
+.tag
+    display: inline-block
+    margin-right: 5px
+    margin-bottom: 15px
+    border: 1px solid $white
+    border-radius: 7px
+    padding: 3px 5px
+
 .d2d-scheme
     background-color: #4b505a
     color: $white
@@ -132,9 +67,11 @@
         color: #333
     i.fab, i.fas
         color: #333
+    .tag
+        border-color: rgba(0, 0, 0, .75)
 
 .autominer-scheme
-    background-color: #537bb3
+    background-color: #395983
     color: $white
     .portfolio__paragraph
         color: $white
@@ -152,28 +89,23 @@
         color: #333
     i.fab, i.fas
         color: #333
+    .tag
+        border-color: rgba(0, 0, 0, .75)
 
 .meinunfall-scheme
-    background-color: #4db7ff
-    color: $white
+    background-color: #99D5FF
+    color: #363638
     .portfolio__paragraph
-        color: $white
+        color: #363638
+    i.fab, i.fas
+        color: #363638
+    .tag
+        border-color: #363638
 
 .rentacar-scheme
-    background-color: #757474
+    background-color: #4A4A4A
     color: $white
     .portfolio__paragraph
         color: $white
-
-.tag
-    display: inline-block
-    margin-right: 5px
-    margin-bottom: 15px
-    border: 1px solid rgba(0, 0, 0, .75)
-    border-radius: 7px
-    padding: 3px 5px
-
-.lazyload-placeholder
-    display: inline-block
-    height: 220px
-    background: $white
+    .tag
+        border: 1px solid #fafafa

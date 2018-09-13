@@ -23,7 +23,7 @@ class Header extends React.Component {
 
     render() {
         return (
-            <header id="header" className="f-col-12">
+            <header id="header" className="f-col-12 f-layer-2">
                 <div className="f-grid">
                     <div className="f-col-12 f-text-left f-sm-text-center f-md-col-6 f-md-text-left">
                         <h1 className="logo">

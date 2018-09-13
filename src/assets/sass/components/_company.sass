@@ -6,7 +6,7 @@
 
 .company__title
     position: relative
-    margin: 15px 0 30px
+    margin: 30px 0
     span:first-child
         color: $darkgray
         font:
@@ -17,6 +17,8 @@
             size: 0.8em
             weight: 300
         color: $darkgray
+        display: inline-block
+        margin-top: 10px
 
 .company__subtitle
     font:
@@ -32,12 +34,14 @@
     margin-top: 15px
 
 .company-role__description
-    border-left: 2px solid $lightgray
+    @media #{$md}
+        border-left: 2px solid $lightgray
 
 .company__role:last-child
     .company-role__description
         border-left: 0
-        padding-left: 42px
+        @media #{$md}
+            padding-left: 42px
 
 .company-role__title
     font:
@@ -66,9 +70,10 @@
 .company-role__description
     padding:
         top: 0
-        left: 40px
         right: 0
     margin-bottom: 30px
+    @media #{$md}
+        padding-left: 40px
 
 .fa-external-link-alt
     font-size: 0.7em

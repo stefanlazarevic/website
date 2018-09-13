@@ -21,12 +21,10 @@ class NotFoundPage extends React.Component {
                 {this.head()}
                 <PageHeader />
                 <main id="not-found-main">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-12">
-                                <h2 className="text--center page__title">404</h2>
-                                <h4 className="text--center page__subtitle">Hmm, looks like I didn't make this page, if you wanted to know this information about me, please <Link className="text--orange" to={Routes.CONTACT}>contact me.</Link></h4>
-                            </div>
+                    <div className="f-grid">
+                        <div className="f-col-12">
+                            <h2 className="f-text-center page__title">404</h2>
+                            <h4 className="f-text-center page__subtitle">Hmm, looks like I didn't make this page,<br/> if you wanted to know this information about me, please <Link className="text--orange" to={Routes.CONTACT}>contact me.</Link></h4>
                         </div>
                     </div>
                 </main>

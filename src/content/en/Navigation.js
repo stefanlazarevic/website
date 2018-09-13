@@ -2,6 +2,6 @@ export default {
     ABOUT: 'About',
     CONTACT: 'Contact',
     WORK: 'Work',
-    PROJECTS: 'Projects',
+    EXPERIENCE: 'Experience',
     PORTFOLIO: 'Portfolio',
 }

@@ -36,8 +36,8 @@ class Navigation extends React.Component {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to={Routes.WORK} activeClassName='active' className="navigation__link role-link">
-                            <span>{this.Content.WORK}</span>
+                        <NavLink to={Routes.EXPERIENCE} activeClassName='active' className="navigation__link role-link">
+                            <span>{this.Content.EXPERIENCE}</span>
                         </NavLink>
                     </li>
                     <li>

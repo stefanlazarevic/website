@@ -26,7 +26,8 @@
 .index__paragraph
     margin-bottom: 40px
     line-height: 2.2em
-    a:hover
+    a:hover,
+    a:focus
         text-decoration: underline
 
 .index__button
@@ -36,7 +37,8 @@
     background-color: $main
     border-radius: 99px
     margin-bottom: 60px
-    &:hover
+    &:hover,
+    &:focus
         color: $white
     @media #{$sm}
         background-color: $darkmain
@@ -49,7 +51,6 @@
     position: fixed
     bottom: 0
     right: 0
-    z-index: 1
 
 .triangle-topleft
     width: 0
@@ -59,4 +60,3 @@
     position: fixed
     top: 0
     left: 0
-    z-index: 1

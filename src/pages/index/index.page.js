@@ -41,9 +41,9 @@ class IndexPage extends React.Component {
                 { this.head() }
                 <div className="triangle-bottomright f-layer-1"></div>
                 <div className="triangle-topleft f-layer-1"></div>
-                <div className="f-grid f-layer-2">
+                <div className="f-grid">
                     <Header />
-                    <div id="main" className="f-col-12">
+                    <div id="main" className="f-col-12 f-layer-2">
                         <div className="f-grid">
                             <div className="f-col-12 f-md-col-6 f-order-1 f-md-order-2">
                                 <div className="f-text-center f-md-text-right">
@@ -64,7 +64,7 @@ class IndexPage extends React.Component {
                                     <span dangerouslySetInnerHTML={{ __html: this.Content.INTRODUCTION }}></span>
                                 </p>
                                 <div className="f-text-center f-md-text-left">
-                                    <Link to={Routes.ABOUT} className="index__button">
+                                    <Link to={Routes.ABOUT} className="index__button" tabIndex="0">
                                         <span>{this.Content.ACTION_BUTTON_TEXT}</span>
                                     </Link>
                                 </div>

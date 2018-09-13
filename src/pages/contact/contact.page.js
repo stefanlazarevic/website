@@ -33,6 +33,7 @@ class ContactPage extends React.Component {
                 <meta name="keywords" content={this.Content.SEO.KEYWORDS}></meta>
                 <style>{this.Content.CRITICAL_CSS}</style>
                 <link rel="canonical" href={`${env.APP_BASE_URL}${Routes.CONTACT}`} />
+                <link rel="stylesheet" async href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"/>
             </Helmet>
         )
     }
@@ -53,7 +54,7 @@ class ContactPage extends React.Component {
                         </p>
                     </div>
                     <div className="f-col-12 f-md-col-6">
-                        <h4 className="text--thin text--center">or connect with me on social networks</h4>
+                        <h4 className="text--thin f-text-center">or connect with me on social networks</h4>
                         <div className="social f-text-center">
                             <a href={RoutesExternal.LINKEDIN} title={RouteTitles.LINKEDIN}>
                                 <i className="fab fa-linkedin"></i>
@@ -69,7 +70,7 @@ class ContactPage extends React.Component {
                             </a>
                         </div>
                     </div>
-                    <div className="f-col-12">
+                    <div className="f-col-12 f-align-end">
                         <PageNavigation prevLink={this.Content.PAGE_NAVIGATION.BACK_BUTTON_LINK}
                             prevText={this.Content.PAGE_NAVIGATION.BACK_BUTTON_TEXT}
                             nextLink={this.Content.PAGE_NAVIGATION.FORWARD_BUTTON_LINK}
