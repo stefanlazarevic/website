@@ -20,7 +20,7 @@ You can visit it live at: [lazarevicstefan.com](http://lazarevicstefan.com)
 - Support offline mode.
 - Integrate React server side rendering. ✓
 - Add unit tests.
-- Add critical css into styles. ✓
+- Add critical css into styles.
 - Add metadata. ✓
 - Add favicon. ✓
 - Create portfolio page. ✓
@@ -33,7 +33,7 @@ You can visit it live at: [lazarevicstefan.com](http://lazarevicstefan.com)
 - Integrate website with Travis CI for continuous integration.
 - Get domain and hosting and publish webiste. ✓
 - Add Responsive navigation. ✓
-- Unblock crawlers and enable site indexing. 
+- Unblock crawlers and enable site indexing.
 
 ---
 
