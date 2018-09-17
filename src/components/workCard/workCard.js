@@ -8,7 +8,7 @@ export default props => (
                 <div className="portfolio__image f f-dir-col f-col-12 f-no-pad">
                     {
                         props.lazy ? (
-                            <LazyLoad className="image">
+                            <LazyLoad className="image" height={200}>
                                 <picture>
                                     <source srcSet={`${props.thumbnail_url}.webp`} type="image/webp" />
                                     <source srcSet={`${props.thumbnail_url}.png`} type="image/png" />
