@@ -2,7 +2,7 @@
 
 This is my personal website that describes who I am and what I do.
 
-You can visit it live at: [lazarevicstefan.com](http://lazarevicstefan.com)
+You can visit it live at: [http://lazarevicstefan.com](http://lazarevicstefan.com)
 
 ---
 
