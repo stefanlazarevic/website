@@ -34,6 +34,7 @@ You can visit it live at: [http://lazarevicstefan.com](http://lazarevicstefan.co
 - Get domain and hosting and publish webiste. ✓
 - Add Responsive navigation. ✓
 - Unblock crawlers and enable site indexing.
+- Find the designer and rebuild ui.
 
 ---
 
